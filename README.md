@@ -9,32 +9,6 @@ The main objective is to evaluate whether an ANN can serve as a reliable screeni
 
 ---
 
-## Project Structure
-.
-├── code/
-│ └── diabetes_prediction.ipynb # Jupyter Notebook (main code)
-│
-├── data/
-│ └── early_stage_diabetes.csv # Dataset
-│
-├── result/
-│ ├── cv_summary.xlsx
-│ ├── test_set_comparison.xlsx
-│ ├── ann_details.json
-│ ├── ann_roc.png
-│ ├── ann_pr.png
-│ ├── ann_calibration.png
-│ ├── ann_confusion_matrix.png
-│ ├── rf_permutation_importance.xlsx
-│ └── rf_permutation_importance.png
-│
-└── README.md
-
-yaml
-Copy code
-
----
-
 ## Dataset
 The project uses the **Early Stage Diabetes Risk Prediction** dataset, which contains:
 
@@ -105,7 +79,6 @@ Run all cells in order.
 After execution, all results will be automatically saved to: `result/`
 To download the results folder: `!zip -r result.zip result`
 
-
 ## Running the Project Locally (Jupyter / VS Code)
 Clone or download the repository.
 
@@ -118,9 +91,8 @@ Launch Jupyter: `jupyter notebook`
 
 Open: `code/DS402_G4_Code.ipynb`
 Verify the dataset path:`CSV_PATH = "data/dataset.csv"`
-Run all cells from top to bottom.
 
-All outputs will appear in the result/ folder.
+Run all cells from top to bottom. All outputs will appear in the result/ folder.
 
 ## Outputs Explained
 After running the notebook, the result/ folder will contain:
@@ -142,4 +114,5 @@ After running the notebook, the result/ folder will contain:
 ## Authors
 1. Shaidatullisa Nadia Saipudin
 2. Amiera Masheetah Rizalman
+
 DS402 Group 4
