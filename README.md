@@ -7,6 +7,8 @@ This project implements a machine learning pipeline to predict early-stage diabe
 
 The main objective is to evaluate whether an ANN can serve as a reliable screening model while prioritizing recall, which is especially important in medical applications where missing a positive case may lead to delayed diagnosis.
 
+---
+
 ## Project Structure
 .
 ├── code/
@@ -28,6 +30,11 @@ The main objective is to evaluate whether an ANN can serve as a reliable screeni
 │
 └── README.md
 
+yaml
+Copy code
+
+---
+
 ## Dataset
 The project uses the **Early Stage Diabetes Risk Prediction** dataset, which contains:
 
@@ -41,6 +48,8 @@ Feature types:
 
 The dataset file must be placed inside the `data/` folder.
 
+---
+
 ## Methodology Summary
 - Categorical variables are encoded numerically (Yes/No → 1/0, Male/Female → 1/0).  
 - Only the `Age` feature is standardized using `StandardScaler`.  
@@ -51,6 +60,8 @@ The dataset file must be placed inside the `data/` folder.
 - Probability calibration is applied using isotonic regression.  
 - The ANN decision threshold is tuned on the validation set to prioritize recall.  
 - Random Forest permutation importance is used for feature interpretability.
+
+---
 
 ## Models Implemented
 
@@ -69,60 +80,91 @@ The dataset file must be placed inside the `data/` folder.
 - Adam optimizer with binary cross-entropy loss  
 - Early stopping  
 
+---
+
 ## Requirements
 Python 3.9 or later is recommended.
 
 Install required libraries:
+```bash
 pip install numpy pandas matplotlib scikit-learn tensorflow openpyxl
 Running the Project in Google Colab (Recommended)
 Open Google Colab and create a new notebook.
 
 Upload the following folders to Colab:
-- code/
-- data/
+
+code/
+
+data/
 
 Open the notebook:
-```python
-code/DS402_G4_Code.ipynb
 
+bash
+Copy code
+code/diabetes_prediction.ipynb
 In the notebook, confirm that the dataset path is set correctly:
-CSV_PATH = "data/dataset.csv"
+
+python
+Copy code
+CSV_PATH = "data/early_stage_diabetes.csv"
 Run all cells in order.
 
 After execution, all results will be automatically saved to:
+
+sql
+Copy code
 result/
-
 To download the results folder:
-!zip -r result.zip result
 
+python
+Copy code
+!zip -r result.zip result
 Running the Project Locally (Jupyter / VS Code)
 Clone or download the repository.
 
 Ensure the folder structure is preserved:
-- code/
-- data/
-- result/
 
-Launch Jupyter: jupyter notebook
+code/
 
+data/
+
+result/
+
+Launch Jupyter:
+
+bash
+Copy code
+jupyter notebook
 Open:
-code/diabetes_prediction.ipynb
 
+bash
+Copy code
+code/diabetes_prediction.ipynb
 Verify the dataset path:
-CSV_PATH = "data/dataset.csv"
+
+python
+Copy code
+CSV_PATH = "data/early_stage_diabetes.csv"
 Run all cells from top to bottom.
 
 All outputs will appear in the result/ folder.
 
 Outputs Explained
 After running the notebook, the result/ folder will contain:
-- Cross-validation summary (cv_summary.xlsx)
-- Test-set performance comparison (test_set_comparison.xlsx)
+
+Cross-validation summary (cv_summary.xlsx)
+
+Test-set performance comparison (test_set_comparison.xlsx)
+
 ANN diagnostic plots:
-- ROC curve
-- Precision–Recall curve
-- Calibration curve
-- Confusion matrix
+
+ROC curve
+
+Precision–Recall curve
+
+Calibration curve
+
+Confusion matrix
 
 ANN details (ann_details.json)
 
