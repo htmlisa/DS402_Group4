@@ -70,32 +70,27 @@ Upload the following folders to Colab:
 - data/
 
 Open the notebook:
-`code/DS402_G4_Code.ipynb.ipynb`
+`code/DS402_G4_Code.ipynb`
 
 In the notebook, confirm that the dataset path is set correctly:
 `CSV_PATH = "data/dataset.csv"`
 Run all cells in order.
 
-After execution, all results will be automatically saved to: `result/`
+After execution, all results will be automatically saved to: `results_diabetes`
 To download the results folder: `!zip -r result.zip result`
 
 ## Running the Project Locally (Jupyter / VS Code)
 Clone or download the repository.
-
-Ensure the folder structure is preserved:
-- code/
-- data/
-- result/
 
 Launch Jupyter: `jupyter notebook`
 
 Open: `code/DS402_G4_Code.ipynb`
 Verify the dataset path:`CSV_PATH = "data/dataset.csv"`
 
-Run all cells from top to bottom. All outputs will appear in the result/ folder.
+Run all cells from top to bottom. All outputs will appear in the results_diabetes/ folder.
 
 ## Outputs Explained
-After running the notebook, the result/ folder will contain:
+After running the notebook, the results_diabetes/ folder will contain:
 - Cross-validation summary (cv_summary.xlsx)
 - Test-set performance comparison (test_set_comparison.xlsx)
 - ROC curve
