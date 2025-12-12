@@ -85,99 +85,61 @@ The dataset file must be placed inside the `data/` folder.
 ## Requirements
 Python 3.9 or later is recommended.
 
-Install required libraries:
-```bash
-pip install numpy pandas matplotlib scikit-learn tensorflow openpyxl
-Running the Project in Google Colab (Recommended)
+### Install required libraries:
+`pip install numpy pandas matplotlib scikit-learn tensorflow openpyxl`
+
+## Running the Project in Google Colab (Recommended)
 Open Google Colab and create a new notebook.
 
 Upload the following folders to Colab:
-
-code/
-
-data/
+- code/
+- data/
 
 Open the notebook:
+`code/DS402_G4_Code.ipynb.ipynb`
 
-bash
-Copy code
-code/diabetes_prediction.ipynb
 In the notebook, confirm that the dataset path is set correctly:
-
-python
-Copy code
-CSV_PATH = "data/early_stage_diabetes.csv"
+`CSV_PATH = "data/dataset.csv"`
 Run all cells in order.
 
-After execution, all results will be automatically saved to:
+After execution, all results will be automatically saved to: `result/`
+To download the results folder: `!zip -r result.zip result`
 
-sql
-Copy code
-result/
-To download the results folder:
 
-python
-Copy code
-!zip -r result.zip result
-Running the Project Locally (Jupyter / VS Code)
+## Running the Project Locally (Jupyter / VS Code)
 Clone or download the repository.
 
 Ensure the folder structure is preserved:
+- code/
+- data/
+- result/
 
-code/
+Launch Jupyter: `jupyter notebook`
 
-data/
-
-result/
-
-Launch Jupyter:
-
-bash
-Copy code
-jupyter notebook
-Open:
-
-bash
-Copy code
-code/diabetes_prediction.ipynb
-Verify the dataset path:
-
-python
-Copy code
-CSV_PATH = "data/early_stage_diabetes.csv"
+Open: `code/DS402_G4_Code.ipynb`
+Verify the dataset path:`CSV_PATH = "data/dataset.csv"`
 Run all cells from top to bottom.
 
 All outputs will appear in the result/ folder.
 
-Outputs Explained
+## Outputs Explained
 After running the notebook, the result/ folder will contain:
+- Cross-validation summary (cv_summary.xlsx)
+- Test-set performance comparison (test_set_comparison.xlsx)
+- ROC curve
+- Precision–Recall curve
+- Calibration curve
+- Confusion matrix
+- ANN details (ann_details.json)
+- Random Forest feature importance (Excel file and PNG)
 
-Cross-validation summary (cv_summary.xlsx)
+## Notes for Users
+- Dataset column names must match the expected names used in the notebook.
+- The notebook automatically strips whitespace from column names to reduce formatting issues.
+- TensorFlow warnings during training are normal and do not affect results.
+- Run all cells sequentially, as later steps depend on earlier outputs.
 
-Test-set performance comparison (test_set_comparison.xlsx)
-
-ANN diagnostic plots:
-
-ROC curve
-
-Precision–Recall curve
-
-Calibration curve
-
-Confusion matrix
-
-ANN details (ann_details.json)
-
-Random Forest feature importance (Excel file and PNG)
-
-Notes for Users
-Dataset column names must match the expected names used in the notebook.
-
-The notebook automatically strips whitespace from column names to reduce formatting issues.
-
-TensorFlow warnings during training are normal and do not affect results.
-
-Run all cells sequentially, as later steps depend on earlier outputs.
-
-Authors
+## Authors
+1. Shaidatullisa Nadia Saipudin
+2. Amiera Masheetah Rizalman
 DS402 Group 4
